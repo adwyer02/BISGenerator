@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BIS Generator</title>
+    <link rel="stylesheet" href="../css/BISGenerator.css">
+</head>
+<body >
+
+<div id="mainContent">
+    <h1>Upload a Service Agreement to continue</h1>
+    <label for="upload">
+        <span id="uploadBox">
+            <img src="../imgs/upload.png" id="uploadImg" alt="Upload Image">
+        </span>
+    </label>
+    <input type="file" id="upload">
+    <div style="height:30px"></div>
+    <div id="uploadText"></div>
+    <div style="height:30px"></div>
+    <progress id="fileLoadBar" max="100" value="0"></progress>
+    <input type="button" id="downloadButton" value="Download BIS">
+
+    <script src='../js/generator.js' type="module"></script>
+    <script src="../js/dropzone.js"></script>
+</div>
+
+</body>
+</html>

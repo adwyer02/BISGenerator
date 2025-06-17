@@ -1,0 +1,42 @@
+#mainContent {
+    text-align: center;
+}
+
+#upload {
+    display: none;
+}
+#uploadBox {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 500px;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+}
+#uploadImg {
+    width: 320px;
+    height: 320px;
+    pointer-events: none;
+}
+
+#downloadButton {
+    display: none;
+    width: 400px;
+    height: 100px;
+    font-size: 30px;
+}
+
+#fileLoadBar {
+    display: none;
+}
+
+#uploadBox.dragover {
+    background-color: #b5b5b5;
+}
+
+#uploadText.error {
+    color: red;
+}
