@@ -58,18 +58,19 @@ document.getElementById("upload").addEventListener("change", function(event) {
 
                     //format docText
                     docText = docText.replaceAll('&amp;', '&');
-                    // let runAnchor = true;
-                    // let searchIndexAnchor = 0;
-                    // while(runAnchor) {
-                    //     let anchorStartIndex = docText.indexOf('<a', searchIndexAnchor)
-                    //     if(anchorStartIndex > -1) {
-                    //         let anchorEndIndex = docText.indexOf('</a>', anchorStartIndex) + 4;
-                    //         let remString = docText.substring(anchorStartIndex, anchorEndIndex);
-                    //         docText = docText.replace(remString, '');
-                    //     } else {
-                    //         runAnchor = false;
-                    //     }
-                    // }
+                    let runAnchor = true;
+                    let searchIndexAnchor = 0;
+                    while(runAnchor) {
+                        let anchorStartIndex = docText.indexOf('<a', searchIndexAnchor)
+                        if(anchorStartIndex > -1) {
+                            let anchorEndIndex = docText.indexOf('</a>', anchorStartIndex) + 4;
+                            let remString = docText.substring(anchorStartIndex, anchorEndIndex);
+                            console.log(remString);
+                            docText = docText.replace(remString, '');
+                        } else {
+                            runAnchor = false;
+                        }
+                    }
 
                     //error checks
                     if (!docText.substring(docText.indexOf('>'), docText.indexOf('<', docText.indexOf('>'))).toLowerCase().includes('service agreement') && !fileName.toLowerCase().includes('service agreement')) {
