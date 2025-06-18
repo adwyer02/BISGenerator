@@ -336,7 +336,7 @@ function buildTable(docData) {
             let sectionLabels = sectionKey.split(',');
             for(let i = 0; i < sectionLabels.length; i++) {
                 if(sectionLabels[i] === "") {
-                    warning = `One or more sections did not include any of the available time slot keywords. Please either:<div style="color: black;">1) Review documentation for available keywords, correct the service agreement, and resubmit.<br>2) Download BIS and review with caution before using</div>`;
+                    warning = `One or more sections did not include any of the available keywords. Please either:<div style="color: black;">1) Review documentation for available keywords, correct the Service Agreement, and resubmit.<br>2) Download BIS and review with caution before using</div>`;
                 } else {
                     sectionLabels[i] = labelMap[sectionLabels[i]];
                 }
