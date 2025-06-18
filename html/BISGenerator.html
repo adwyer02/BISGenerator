@@ -8,7 +8,8 @@
 <body >
 
 <div id="mainContent">
-    <h1>Upload a Service Agreement to continue</h1>
+    <h1>BIS Generator</h1>
+    <h2>Click or drag to upload a Service Agreement</h2>
     <label for="upload">
         <span id="uploadBox">
             <img src="../imgs/upload.png" id="uploadImg" alt="Upload Image">
@@ -24,6 +25,86 @@
     <script src='../js/generator.js' type="module"></script>
     <script src="../js/dropzone.js"></script>
 </div>
+
+<div id="documentation">
+    <h1>FORMATTING GUIDELINES</h1>
+    <p>This tool is used to convert a Service Agreement to a Building Inspection Sheet instantly. It requires some simple formatting of the Service Agreement in order to work correctly. Either follow this format to make your Service Agreement, or update your existing Service Agreement to include the following formatting.</p>
+    <p style="color:red; font-size:20px">DISCLAIMER: This tool is prone to mistakes if the formatting of the Service Agreement is not exact. After using, always do a quick review of the generated BIS to ensure no mistakes were made.</p>
+    <h2>UPDATING STYLES</h2>
+    <p>To update styles as instructed in the upcoming steps, simply select the text you would like to update, right-click on the correct heading in the toolbar, select "Update Heading to Match Selection", and ensure the text is set to the style.</p>
+    <img src="../imgs/updateStyle1.png" alt="Update Styles" style="margin-right:150px">
+    <img src="../imgs/updateStyle2.png" alt="Update Styles">
+    <h2>BUILDING NAME</h2>
+    <p>The name of the building as seen at the very beginning of the Service Agreement must be given "Heading 1" style.</p>
+    <img src="../imgs/heading1.png" alt="BISGenerator_Heading_1">
+    <h2>AREA NAMES</h2>
+    <p>The name of each area to be cleaned must be given "Heading 2" style.</p>
+    <img src="../imgs/heading2.png" alt="BISGenerator_Heading_2" width="600">
+    <h2>SECTION TITLES</h2>
+    <p>Each section title must be italicized.</p>
+    <img src="../imgs/sectionTitles1.png" alt="Section Titles 1" width="600">
+    <p>This tool is designed to recognize certain keywords from the section title to correctly identify which tasks get done on which days. <br>The keywords this tool can recognize are as follows.</p>
+    <h3>Section Keywords</h3>
+    <ul>
+        <li>Individual days/periods
+            <ul>
+                <li>Services to be performed Monday, Wednesday, Friday etc.</li>
+                <li>Services to be performed Weekly/Monthly/Quarterly</li>
+            </ul>
+        </li>
+        <br>
+        <li>A span of days
+            <ul>
+                <li>Services to be performed Monday-Friday.</li>
+                <li>Services to be performed Monday through Friday</li>
+            </ul>
+        </li>
+        <br>
+        <li>All available days (will include any days that are included elsewhere in the document)
+            <ul>
+                <li>Services to be performed Daily/Every day/Nightly/Every night</li>
+            </ul>
+        </li>
+        <br>
+        <li>Every day of the week
+            <ul>
+                <li>Services to be performed every day of the week</li>
+                <li>Seven days a week</li>
+                <li>Seven nights a week</li>
+                <li>Seven days per week</li>
+                <li>Seven nights per week</li>
+                <li>Seven days/week</li>
+                <li>Seven nights/week</li>
+            </ul>
+        </li>
+        <li>Weekdays
+            <ul>
+                <li>Services to be performed on weekdays</li>
+            </ul>
+        </li>
+        <br>
+        <span style="color:red;">
+            <li>WARNING: The following will not be recognized by this tool, as it has no way of knowing how to translate them to the BIS.
+                <ul>
+                    <li>Services to be performed as needed</li>
+                    <li>Services to be performed three days a week (please specify which days)</li>
+                    <li>Any line item that says somebody other than the IC will do the task (this tool will include it on the BIS as an IC task)</li>
+                </ul>
+            </li>
+        </span>
+    </ul>
+    <p>If any of your sections do not include any of the above keywords, the tool will not correctly generate that section on the BIS. If you get a warning about section keywords, please review the BIS carefully and correct mistakes.</p>
+    <h2>LINE ITEMS</h2>
+    <p>The line items under a section must be in a bulleted list.</p>
+    <img src="../imgs/lineItems.png" alt="Line Items">
+    <p>nested bullets will NOT be properly accounted for. if your Service Agreement includes them, please correct any errors in the generated BIS.</p>
+    <img src="../imgs/nestedLineItems.png" alt="Nested Line Items">
+    <h2>AFTER LAST AREA</h2>
+    <p>Find the first piece of text after the last area, usually "General", and give it "Heading 3" style.</p>
+    <img src="../imgs/afterLastArea.png" alt="After Last Area">
+
+</div>
+<div style="height: 250px;"></div>
 
 </body>
 </html>

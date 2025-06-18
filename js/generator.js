@@ -2,6 +2,7 @@ import mammoth from '../modules/mammoth.module.js';
 import {buildDocx, error, warning} from "./docBuilder.js";
 
 document.getElementById("upload").addEventListener("change", function(event) {
+    document.getElementById("mainContent").style.height = '830px';
 
     let fileLoadBar = document.getElementById('fileLoadBar');
     let downloadButton = document.getElementById('downloadButton');
@@ -208,7 +209,7 @@ document.getElementById("upload").addEventListener("change", function(event) {
                             }
 
                             //check for seven days a week
-                            let sevenSynonyms = ['seven days a week', 'seven days per week', 'seven nights a week', 'seven nights per week'];
+                            let sevenSynonyms = ['seven days a week', 'seven days per week', 'seven nights a week', 'seven nights per week', 'seven days/week', 'seven nights/week', 'Every day of the week'];
                             sevenSynonyms.forEach(str => {
                                 if (sectionTitle.includes(str)) {
                                     fullWeek.forEach(day => {

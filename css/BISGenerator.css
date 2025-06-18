@@ -1,5 +1,12 @@
 #mainContent {
     text-align: center;
+    height: 650px;
+}
+h1, h2, h3, p {
+}
+#documentation {
+    width: 50%;
+    margin: auto;
 }
 
 #upload {
@@ -39,4 +46,10 @@
 
 #uploadText.error {
     color: red;
+}
+
+#documentation {
+    background-color: #f1f1f1;
+    padding: 20px 40px 40px 40px;
+    border-radius: 20px;
 }
